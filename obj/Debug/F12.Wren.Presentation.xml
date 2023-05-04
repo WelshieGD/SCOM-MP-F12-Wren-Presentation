@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ManagementPack SchemaVersion="2.0" ContentReadable="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Manifest>
+    <Identity>
+      <ID>F12.Wren.Presentation</ID>
+      <Version>1.0.0.68</Version>
+    </Identity>
+    <Name>F12 Wren Presentation</Name>
+    <References>
+      <Reference Alias="SC">
+        <ID>Microsoft.SystemCenter.Library</ID>
+        <Version>7.0.8437.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="System">
+        <ID>System.Library</ID>
+        <Version>7.5.8501.0</Version>
+        <PublicKeyToken>31bf3856ad364e35</PublicKeyToken>
+      </Reference>
+      <Reference Alias="FWM">
+        <ID>F12.Wren.Monitoring</ID>
+        <Version>1.0.0.121</Version>
+        <PublicKeyToken>613c75f5c3127300</PublicKeyToken>
+      </Reference>
+    </References>
+  </Manifest>
+  <Presentation>
+    <Views>
+      <View ID="F12.Wren.Presentation.View.Diagram.Application" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.DistributedApplication" TypeID="SC!Microsoft.SystemCenter.DiagramViewType" Visible="true">
+        <Category>Operations</Category>
+      </View>
+      <View ID="F12.Wren.Presentation.View.State.StoresClient" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.ComputerRole.StoreClient" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Custom</Category>
+      </View>
+      <View ID="F12.Wren.Presentation.View.State.Seed" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.Seed" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Custom</Category>
+      </View>
+      <View ID="F12.Wren.Presentation.View.State.CentralReceiver" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.ComputerRole.CentralReceiver" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Custom</Category>
+        <Presentation>
+          <ColumnInfo Index="0" SortIndex="0" Width="100" Grouped="false" Sorted="true" IsSortable="true" Visible="true" SortOrder="Descending">
+            <Name>State</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.CentralReceiver</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="1" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Maintenance Mode</Name>
+            <Id>InMaintenanceMode</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="2" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Name</Name>
+            <Id>Name</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="3" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Path</Name>
+            <Id>Path</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="4" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="false" SortOrder="Ascending">
+            <Name>Display Name</Name>
+            <Id>System.Entity/DisplayName</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="5" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Install Path</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.CentralReceiver/InstallPath</Id>
+          </ColumnInfo>
+        </Presentation>
+      </View>
+      <View ID="F12.Wren.Presentation.View.State.Queue" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.Queue" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Custom</Category>
+        <Presentation>
+          <ColumnInfo Index="0" SortIndex="0" Width="100" Grouped="false" Sorted="true" IsSortable="true" Visible="true" SortOrder="Descending">
+            <Name>State</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreServer</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="1" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Maintenance Mode</Name>
+            <Id>InMaintenanceMode</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="2" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Name</Name>
+            <Id>Name</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="3" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Path</Name>
+            <Id>Path</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="4" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="false" SortOrder="Ascending">
+            <Name>Display Name</Name>
+            <Id>System.Entity/DisplayName</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="5" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>StoreCode</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreComputer/StoreCode</Id>
+          </ColumnInfo>
+        </Presentation>
+      </View>
+      <View ID="F12.Wren.Presentation.View.State.CentralProcessor" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.ComputerRole.CentralProcessor" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Custom</Category>
+        <Presentation>
+          <ColumnInfo Index="0" SortIndex="0" Width="100" Grouped="false" Sorted="true" IsSortable="true" Visible="true" SortOrder="Descending">
+            <Name>State</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.CentralProcessor</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="1" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Maintenance Mode</Name>
+            <Id>InMaintenanceMode</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="2" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Name</Name>
+            <Id>Name</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="3" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Path</Name>
+            <Id>Path</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="4" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="false" SortOrder="Ascending">
+            <Name>Display Name</Name>
+            <Id>System.Entity/DisplayName</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="5" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Queue Path</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.CentralProcessor/QueuePath</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="6" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Database Name</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.CentralProcessor/DatabaseName</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="7" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Database Path</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.CentralProcessor/DatabasePath</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="8" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="false" SortOrder="Ascending">
+            <Name>F12 Stores - Queue</Name>
+            <Id>F12.Wren.Monitoring.Stores.Queue</Id>
+          </ColumnInfo>
+        </Presentation>
+      </View>
+      <View ID="F12.Wren.Presentation.View.State.Store" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.Store" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Custom</Category>
+        <Presentation>
+          <ColumnInfo Index="0" SortIndex="0" Width="100" Grouped="false" Sorted="true" IsSortable="true" Visible="true" SortOrder="Descending">
+            <Name>State</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreServer</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="1" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Maintenance Mode</Name>
+            <Id>InMaintenanceMode</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="2" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Name</Name>
+            <Id>Name</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="3" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Path</Name>
+            <Id>Path</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="4" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="false" SortOrder="Ascending">
+            <Name>Display Name</Name>
+            <Id>System.Entity/DisplayName</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="5" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>StoreCode</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreComputer/StoreCode</Id>
+          </ColumnInfo>
+        </Presentation>
+      </View>
+      <View ID="F12.Wren.Presentation.View.State.StoresServer" Accessibility="Public" Target="FWM!F12.Wren.Monitoring.Stores.ComputerRole.StoreServer" TypeID="SC!Microsoft.SystemCenter.StateViewType" Visible="true">
+        <Category>Custom</Category>
+        <Presentation>
+          <ColumnInfo Index="0" SortIndex="0" Width="100" Grouped="false" Sorted="true" IsSortable="true" Visible="true" SortOrder="Descending">
+            <Name>State</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreServer</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="1" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Maintenance Mode</Name>
+            <Id>InMaintenanceMode</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="2" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Name</Name>
+            <Id>Name</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="3" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>Path</Name>
+            <Id>Path</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="4" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="false" SortOrder="Ascending">
+            <Name>Display Name</Name>
+            <Id>System.Entity/DisplayName</Id>
+          </ColumnInfo>
+          <ColumnInfo Index="5" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
+            <Name>StoreCode</Name>
+            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreComputer/StoreCode</Id>
+          </ColumnInfo>
+        </Presentation>
+      </View>
+    </Views>
+    <Folders>
+      <Folder ID="F12.Wren.Presentation.Folders" Accessibility="Public" ParentFolder="SC!Microsoft.SystemCenter.Monitoring.ViewFolder.Root" />
+      <Folder ID="F12.Wren.Presentation.Folder.Central" Accessibility="Public" ParentFolder="F12.Wren.Presentation.Folders" />
+      <Folder ID="F12.Wren.Presentation.Folder.Stores" Accessibility="Public" ParentFolder="F12.Wren.Presentation.Folders" />
+    </Folders>
+    <FolderItems>
+      <FolderItem ElementID="F12.Wren.Presentation.View.Diagram.Application" Folder="F12.Wren.Presentation.Folders" ID="F12.Wren.Presentation.View.Diagram.Application.FolderItem" />
+      <FolderItem ElementID="F12.Wren.Presentation.View.State.StoresClient" Folder="F12.Wren.Presentation.Folder.Stores" ID="F12.Wren.Presentation.View.State.StoresClient.FolderItem" />
+      <FolderItem ElementID="F12.Wren.Presentation.View.State.Seed" Folder="F12.Wren.Presentation.Folders" ID="F12.Wren.Presentation.View.State.Seed.FolderItem" />
+      <FolderItem ElementID="F12.Wren.Presentation.View.State.CentralReceiver" Folder="F12.Wren.Presentation.Folder.Central" ID="F12.Wren.Presentation.View.State.CentralReceiver.FolderItem" />
+      <FolderItem ElementID="F12.Wren.Presentation.View.State.Queue" Folder="F12.Wren.Presentation.Folder.Central" ID="F12.Wren.Presentation.View.State.Queue.FolderItem" />
+      <FolderItem ElementID="F12.Wren.Presentation.View.State.CentralProcessor" Folder="F12.Wren.Presentation.Folder.Central" ID="F12.Wren.Presentation.View.State.CentralProcessor.FolderItem" />
+      <FolderItem ElementID="F12.Wren.Presentation.View.State.Store" Folder="F12.Wren.Presentation.Folder.Stores" ID="F12.Wren.Presentation.View.State.Store.FolderItem" />
+      <FolderItem ElementID="F12.Wren.Presentation.View.State.StoresServer" Folder="F12.Wren.Presentation.Folder.Stores" ID="F12.Wren.Presentation.View.State.StoresServer.FolderItem" />
+    </FolderItems>
+  </Presentation>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        <DisplayString ElementID="F12.Wren.Presentation">
+          <Name>F12 Wren Dashboards</Name>
+          <Description>Dashboards for Wren Application</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.Diagram.Application">
+          <Name>Application</Name>
+          <Description>Description for the new view</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.Folders">
+          <Name>F12 Wren Monitoring</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.Folder.Central">
+          <Name>Central</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.Folder.Stores">
+          <Name>Stores</Name>
+          <Description></Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.State.StoresClient">
+          <Name>Store Client State View</Name>
+          <Description>F12 Wren Store Client State View</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.State.Seed">
+          <Name>Seed View</Name>
+          <Description>F12 Seed Class State View</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.State.CentralReceiver">
+          <Name>Central Receiver State View</Name>
+          <Description>F12 Wren Central Receiver State View</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.State.Queue">
+          <Name>Queue State View</Name>
+          <Description>F12 Wren Queue State View</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.State.CentralProcessor">
+          <Name>Central Processor State View</Name>
+          <Description>F12 Wren Central Processor State View</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.State.Store">
+          <Name>Stores </Name>
+          <Description>F12 Wren Store Server State View</Description>
+        </DisplayString>
+        <DisplayString ElementID="F12.Wren.Presentation.View.State.StoresServer">
+          <Name>Store Server State View</Name>
+          <Description>F12 Wren Store Server State View</Description>
+        </DisplayString>
+      </DisplayStrings>
+      <KnowledgeArticles></KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPack>

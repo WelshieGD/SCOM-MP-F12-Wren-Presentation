@@ -1,0 +1,36 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Presentation>
+    <Folders>
+      
+      <!-- In this section, you can create more folders. Edit the DisplayString for this folder 
+           to change the name the user sees in the console. More information can be found in 
+           the Management Pack Development Kit: http://msdn.microsoft.com/en-us/library/ee533810.aspx -->
+      <Folder ID="F12.Wren.Presentation.Folders" Accessibility="Public" ParentFolder="SC!Microsoft.SystemCenter.Monitoring.ViewFolder.Root" />
+		<Folder ID="F12.Wren.Presentation.Folder.Central" Accessibility="Public" ParentFolder="F12.Wren.Presentation.Folders" />
+		<Folder ID="F12.Wren.Presentation.Folder.Stores" Accessibility="Public" ParentFolder="F12.Wren.Presentation.Folders" />
+	</Folders>
+    
+  </Presentation>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        
+        <DisplayString ElementID="F12.Wren.Presentation.Folders">
+          <Name>F12 Wren Monitoring</Name>
+          <Description></Description>
+        </DisplayString>
+
+		  <DisplayString ElementID="F12.Wren.Presentation.Folder.Central">
+			  <Name>Central</Name>
+			  <Description></Description>
+		  </DisplayString>
+
+		  <DisplayString ElementID="F12.Wren.Presentation.Folder.Stores">
+			  <Name>Stores</Name>
+			  <Description></Description>
+		  </DisplayString>
+
+	  </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>
