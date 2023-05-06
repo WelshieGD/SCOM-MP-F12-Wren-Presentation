@@ -3,7 +3,7 @@
   <Manifest>
     <Identity>
       <ID>F12.Wren.Presentation</ID>
-      <Version>1.0.0.68</Version>
+      <Version>1.0.0.76</Version>
     </Identity>
     <Name>F12 Wren Presentation</Name>
     <References>
@@ -19,7 +19,7 @@
       </Reference>
       <Reference Alias="FWM">
         <ID>F12.Wren.Monitoring</ID>
-        <Version>1.0.0.121</Version>
+        <Version>1.0.0.132</Version>
         <PublicKeyToken>613c75f5c3127300</PublicKeyToken>
       </Reference>
     </References>
@@ -69,7 +69,7 @@
         <Presentation>
           <ColumnInfo Index="0" SortIndex="0" Width="100" Grouped="false" Sorted="true" IsSortable="true" Visible="true" SortOrder="Descending">
             <Name>State</Name>
-            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreServer</Id>
+            <Id>F12.Wren.Monitoring.Stores.Queue</Id>
           </ColumnInfo>
           <ColumnInfo Index="1" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
             <Name>Maintenance Mode</Name>
@@ -86,10 +86,6 @@
           <ColumnInfo Index="4" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="false" SortOrder="Ascending">
             <Name>Display Name</Name>
             <Id>System.Entity/DisplayName</Id>
-          </ColumnInfo>
-          <ColumnInfo Index="5" SortIndex="-1" Width="100" Grouped="false" Sorted="false" IsSortable="true" Visible="true" SortOrder="Ascending">
-            <Name>StoreCode</Name>
-            <Id>F12.Wren.Monitoring.Stores.ComputerRole.StoreComputer/StoreCode</Id>
           </ColumnInfo>
         </Presentation>
       </View>
